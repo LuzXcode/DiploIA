@@ -1,5 +1,5 @@
 # ============================================================
-Esto se ejecuta en la celda final de tu notebook o modelo
+# Esto se ejecuta en la celda final de tu notebook o modelo
 # ============================================================
 
 import joblib
