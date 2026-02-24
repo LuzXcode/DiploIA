@@ -48,19 +48,7 @@ Descargá los 3 archivos generados:
 
 > **Tip:** Los archivos `.joblib` pueden ser grandes. Si superan 100 MB usá [Git LFS](https://git-lfs.github.com/).
 
----
-
-## PASO 3 — Deploy en Render
-
-1. Entrá a [render.com](https://render.com) y creá una cuenta gratis
-2. Click en **New → Web Service**
-3. Conectá tu cuenta de GitHub y seleccioná el repositorio
-4. Render va a detectar el `render.yaml` automáticamente
-5. Click en **Deploy** y esperá ~3 minutos
-
-Tu API va a quedar en: `https://valuador-ph-cordoba.onrender.com`
-
----
+--
 
 ## Uso de la API
 
