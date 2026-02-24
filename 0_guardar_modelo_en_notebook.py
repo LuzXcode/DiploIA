@@ -1,7 +1,5 @@
 # ============================================================
-# PASO 0 — Ejecutá esta celda AL FINAL de tu notebook
-# para guardar el modelo y los promedios de features.
-# Luego descargá los 2 archivos generados.
+Esto se ejecuta en la celda final de tu notebook o modelo
 # ============================================================
 
 import joblib
