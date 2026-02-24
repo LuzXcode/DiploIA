@@ -1,4 +1,6 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from typing import Literal, Optional
 import numpy as np
@@ -28,7 +30,14 @@ app = FastAPI(
     title="Valuador Inteligente PH · Córdoba",
     description="Predice el valor OMI de una propiedad horizontal en Córdoba, Argentina.",
     version="2.0.0",
+    docs_url=None,
+    redoc_url=None,
+    openapi_url=None,
 )
+
+@app.get("/", include_in_schema=False)
+def frontend():
+    return FileResponse(os.path.join(BASE_DIR, "index.html"))
 
 # ── Esquemas ──────────────────────────────────────────────────────────────────
 class EntradaManual(BaseModel):
@@ -93,7 +102,7 @@ def hacer_prediccion(input_df: pd.DataFrame):
     return prediccion, prediccion_log
 
 # ── Endpoints ─────────────────────────────────────────────────────────────────
-@app.get("/", tags=["Estado"])
+@app.get("/estado", tags=["Estado"])
 def estado():
     propiedades_cargadas = len(df_propiedades) if df_propiedades is not None else 0
     return {
