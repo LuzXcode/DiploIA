@@ -384,12 +384,12 @@
       </div>
 
       <button class="btn" id="btnCalc" onclick="calcular()">
-        <span class="btn-txt">Calcular valor OMI</span>
+        <span class="btn-txt">Calcular valor</span>
         <div class="spinner"></div>
       </button>
 
       <div class="resultado" id="res">
-        <div class="res-label">// valor omi estimado</div>
+        <div class="res-label">// valor estimado</div>
         <div class="res-valor" id="resValor">—</div>
       </div>
     </div>
@@ -488,7 +488,7 @@ mapa.on('click', function(e) {
 
 function mkPopup(val) {
   return `<div style="font-family:'DM Mono',monospace;padding:4px 2px">
-    <div style="font-size:10px;color:#888;margin-bottom:4px;letter-spacing:0.08em">VALOR OMI ESTIMADO</div>
+    <div style="font-size:10px;color:#888;margin-bottom:4px;letter-spacing:0.08em">VALOR ESTIMADO</div>
     <div style="font-size:15px;color:#a855f7;font-weight:500">${val}</div>
   </div>`;
 }
@@ -537,7 +537,7 @@ async function calcular() {
     const data = await resp.json();
     if (!resp.ok) throw new Error(data.detail || 'Error en el servidor');
 
-    const valorFmt = fmt(data.valor_estimado);
+    const valorFmt = fmt(data.valor_omi_estimado);
     ultimoValor = valorFmt;
 
     const res = document.getElementById('res');
