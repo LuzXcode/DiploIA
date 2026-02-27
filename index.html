@@ -537,7 +537,7 @@ async function calcular() {
     const data = await resp.json();
     if (!resp.ok) throw new Error(data.detail || 'Error en el servidor');
 
-    const valorFmt = fmt(data.valor_omi_estimado);
+    const valorFmt = fmt(data.valor_estimado);
     ultimoValor = valorFmt;
 
     const res = document.getElementById('res');
