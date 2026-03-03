@@ -66,10 +66,10 @@ Descargá los 3 archivos generados:
 
 ## PASO 3 — Deploy en Render
 
-1. Entrá a [render.com](https://render.com) y creá una cuenta gratis
+1. Entrá a [replit.com](https://replit.com) y creá una cuenta gratis
 2. Click en **New → Web Service**
 3. Conectá tu cuenta de GitHub y seleccioná el repositorio
-4. Render va a detectar el `render.yaml` automáticamente
+4. Render va a detectar el `replit.yaml` automáticamente
 5. Click en **Deploy Web Service** y esperá ~3 minutos
 
 Tu API va a estar viva en una URL del estilo:
@@ -121,7 +121,7 @@ curl -X POST "https://diploia6.onrender.com/predecir" \
 
 ## Notas importantes
 
-- **Plan gratuito de Render:** el servicio "duerme" tras 15 minutos de inactividad. La primera request puede tardar ~30 segundos en "despertar".
+- **Plan gratuito de Replit:** el servicio "duerme" tras 15 minutos de inactividad. La primera request puede tardar ~30 segundos en "despertar".
 - **`mes_num`** se fija automáticamente al máximo del período de entrenamiento (el más reciente).
 - Los features no ingresados por el usuario se completan con el promedio del dataset de entrenamiento.
 - Las coordenadas **X e Y** se seleccionan directamente desde el mapa interactivo en la interfaz.
